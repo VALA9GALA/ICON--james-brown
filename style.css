@@ -1,5 +1,5 @@
 html {
-  scrollbar-color: purple rgb(181, 61, 225);
+  scrollbar-color: purple rgb(164, 57, 176);
 }
 body {
   background: linear-gradient(254deg, #dbbe49, #a342e4);
@@ -40,11 +40,12 @@ body {
   z-index: 1;
   background-image: url("SF_101_How-James-Brown-Invented-Funk_PBSLearning_THUMB.png");
   background-size: 90%;
+  background-repeat: no-repeat;
 }
 .overlay {
   width: 100%;
   position: absolute;
-  margin-top: 940px;
+  margin-top: 960px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -71,16 +72,24 @@ h2 {
     transform: none;
   }
 }
+.icon {
+  margin-top: 100px;
+  margin-left: 80px;
+  color: #d4b0ec;
+  font-family: Monoton;
+  font-size: 90px;
+  letter-spacing: 6px;
+  animation: glitter 3s alternate-reverse infinite, inner-left 2s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
 h1 {
   font-family: Lobster;
   font-size: 160px;
   color: rgb(182, 137, 25);
   letter-spacing: 6px;
+  margin-top: -20px;
   margin-left: 20px;
   padding: 20px;
-  /* border-radius: 300px 0px;*/
-
-  /* box-shadow: 8px 22px darkslategray;*/
   animation: glitter 3s alternate-reverse infinite, inner-left 2s 1s ease both,
     text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
@@ -133,7 +142,7 @@ h3 a:hover {
   color: rgb(151, 116, 29);
 }
 .brown-spotify {
-  margin-top: 340px;
+  margin-top: 320px;
 }
 
 .spotify {
@@ -147,7 +156,16 @@ p {
   color: darkslategray;
   line-height: 2;
   margin-left: 60px;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 2s ease-out;
 }
+
+.active {
+  opacity: 4;
+  transform: translateY(0);
+}
+
 .brown {
   margin-left: 80px;
   font-family: Lobster;
@@ -180,15 +198,27 @@ p {
 .third-p {
   margin-right: 0px;
 }
+.hardest-working {
+  text-align: center;
+  font-size: 26px;
+  font-family: Monoton;
+  color: rgb(218, 204, 166);
+  letter-spacing: 4px;
+  text-shadow: 1px 2px rgb(40, 57, 57);
+  animation: glitter 3s alternate-reverse infinite;
+}
 .container {
   display: grid;
   width: 100%;
-
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .giphy-embed {
   margin-left: auto;
   margin-right: auto;
+  border: 18px groove darkgoldenrod;
+  border-radius: 8px;
+  background-color: rgb(218, 204, 166);
+  box-shadow: 2px 6px 8px rgba(47, 79, 79, 0.6);
 }
 .valagala {
   margin-bottom: -10px;

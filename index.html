@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&family=Lobster&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&family=Lobster&family=Limelight&family=Monoton&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -25,12 +25,13 @@
     <div class="gradient-background"></div>
     <div class="background-img"></div>
     <div class="overlay">
-      <h2>Get up off that thang!</h2>
+      <div class="icon">icon</div>
+      <h2><em>Get up off that thang!</em></h2>
 
       <h1>James Brown</h1>
       <div>
         <h3>
-          <a href="#gif-gal">Hardest-Working Man in Show Business</a> |
+          <a href="#gif-gal">Hardest-Working Man</a> |
           <a href="#godfather">Godfather of Soul</a> |
           <a href="#dynamite">Mr. Dynamite</a> |
           <a href="#soul-brother">Soul Brother No. 1</a>
@@ -41,7 +42,7 @@
         <iframe
           class="spotify"
           style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4y2rNC?utm_source=generator"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4y2rNC?utm_source=generator&theme=0"
           width="45%"
           height="152"
           frameborder="0"
@@ -49,7 +50,8 @@
           loading="lazy"
         ></iframe>
       </div>
-      <p id="godfather">
+
+      <p id="godfather" class="fade-in">
         <br />
         began his career as a gospel singer in Toccoa, Georgia. He rose to
         prominence in the mid-1950s as the lead singer of the Famous Flames, a
@@ -72,7 +74,8 @@
       </p>
 
       <span class="james" id="dynamite">James</span>
-      <p class="second-p">
+
+      <p class="second-p fade-in">
         Joseph Brown (May 3, 1933 – December 25, 2006) was an American singer,
         dancer and musician. The central progenitor of funk music and a major
         figure of 20th-century music, he is referred to by various nicknames,
@@ -82,8 +85,10 @@
         genres. Brown was one of the first 10 inductees into the Rock and Roll
         Hall of Fame on January 23, 1986.
       </p>
+
       <span class="brown-two" id="soul-brother">Brown</span>
-      <p class="third-p">
+
+      <p class="third-p fade-in">
         recorded and released 17 singles that reached No. 1 on the Billboard R&B
         charts. He also holds the record for the most singles listed on the
         Billboard Hot 100 chart that did not reach No. 1. Brown was posthumously
@@ -96,12 +101,13 @@
         seventh on Rolling Stone's list of the 100 Greatest Artists of All Time
         and at No. 44 on their list of the 200 Greatest Singers of All Time.
       </p>
+
+      <h4 class="hardest-working">Hardest Working Man in Show Business</h4>
       <div class="container" id="gif-gal">
         <iframe
           src="https://giphy.com/embed/WmXaVcRMhvTiM7fTCZ"
           width="250"
           height="200"
-          frameborder="0"
           class="giphy-embed"
           allowfullscreen
         ></iframe>
@@ -109,7 +115,6 @@
           src="https://giphy.com/embed/YMqJoO4rLvWz1QpOYb"
           width="250"
           height="200"
-          frameborder="0"
           class="giphy-embed"
           allowfullscreen
         ></iframe>
@@ -117,7 +122,6 @@
           src="https://giphy.com/embed/QADiT4XdYv18QDYfCm"
           width="250"
           height="200"
-          frameborder="0"
           class="giphy-embed"
           allowfullscreen
         ></iframe>
@@ -125,7 +129,6 @@
           src="https://giphy.com/embed/YlG76gpCXhKHAGIsJD"
           width="250"
           height="200"
-          frameborder="0"
           class="giphy-embed"
           allowfullscreen
         ></iframe>
@@ -133,13 +136,14 @@
 
       <footer>
         coded by
+
         <a
-          href="https://github.com/VALA9GALA/ICON--james-brown"
+          href="https://valagala.netlify.app/"
           target="_blank"
           rel="noreferrer noopener"
           ><img
             class="valagala"
-            src="http://www.gigaglitters.com/created/W9mSKlbFxe.gif"
+            src="http://www.gigaglitters.com/created/edS1gq8z4F.gif"
             width="150"
             height="33"
             alt="http://www.rasaint.net/ - Glitter Graphics"
@@ -151,6 +155,14 @@
           rel="noreferrer noopener"
           >wikipedia</a
         >
+
+        see on
+        <a
+          href="https://github.com/VALA9GALA/ICON--james-brown"
+          target="_blank"
+          rel="noreferrer noopener"
+          >github</a
+        >
       </footer>
     </div>
     <div class="top-star">
@@ -158,5 +170,24 @@
         <i class="fa-regular fa-star"></i>
       </a>
     </div>
+    <script>
+      const elements = document.querySelectorAll(".fade-in");
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
+      };
+      const callbacks = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      };
+      let observer = new IntersectionObserver(callbacks, options);
+      elements.forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
   </body>
 </html>
