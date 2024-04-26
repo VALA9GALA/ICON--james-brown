@@ -242,91 +242,280 @@ footer {
   opacity: 0.7;
   letter-spacing: 2px;
 }
-/* Base styles */
 
-/* Your existing CSS code goes here */
-
-/* Media query for viewport widths up to 768px */
-@media (max-width: 768px) {
-  /* Media query for viewport widths up to 768px */
-  @media (max-width: 768px) {
-    .background-img {
-      position: absolute; /* Change to fixed position to cover entire viewport */
-      z-index: 0; /* Lower z-index to place it below overlay content */
-      background-size: cover; /* Cover the entire viewport */
-      background-position: center; /* Center the background image */
-      height: 100vh; /* Set height to full viewport height */
-      width: 100%; /* Set width to 100% */
-    }
-
-    .overlay {
-      position: relative; /* Change to relative position */
-      margin-top: 500px; /* Remove margin-top */
-      top: 0; /* Reset top position */
-      left: 0; /* Reset left position */
-      transform: none; /* Reset transform */
-      z-index: 1; /* Increase z-index to place it above background */
-      overflow-y: auto; /* Enable overflow-y for scrolling */
-    }
+@media (max-width: 900px) {
+  .background-img {
+    position: absolute;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
   }
+
+  .overlay {
+    position: relative;
+    margin-top: 550px;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 1;
+    overflow-y: auto;
+  }
+
   .title {
     position: relative;
     top: -60px;
   }
   .icon {
-    font-size: 70px; /* Adjust font size for smaller screens */
-    letter-spacing: 4px; /* Adjust letter spacing */
-   margin-left: 80px;
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin-left: 180px;
   }
 
   h1 {
-    font-size: 60px; /* Adjust font size for smaller screens */
-    letter-spacing: 4px; /* Adjust letter spacing */
-    padding: 10px; /* Reduce padding for smaller screens */
-    margin-left: 0; /* Reset margin for smaller screens */
+    font-size: 120px;
+    letter-spacing: 4px;
+    padding: 10px;
+    margin-left: 0;
   }
 
   h2 {
-    margin-right: 20px; /* Adjust margin */
-    font-size: 20px; /* Adjust font size for smaller screens */
-    letter-spacing: 2px; /* Adjust letter spacing */
+    margin-right: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
   }
-
+  @keyframes outer-left {
+    from {
+      transform: translateX(90%);
+    }
+    to {
+      transform: none;
+    }
+  }
   h3 {
-    margin-top: -40px; /* Adjust margin */
-    margin-bottom: -280px; /* Adjust margin */
-    font-size: 14px; /* Adjust font size for smaller screens */
-    letter-spacing: 1px; /* Adjust letter spacing */
+    margin-top: -40px;
+    margin-bottom: -280px;
+    font-size: 14px;
+    letter-spacing: 1px;
   }
 
   .spotify {
-    margin-left: 20px; /* Adjust margin */
-    width: 90%;
+    margin-right: auto;
+    width: 75%;
   }
 
   p {
-    padding: 20px; /* Adjust padding */
-    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 20px;
+    font-size: 14px;
   }
   .brown {
     margin-left: 15px;
   }
   .brown,
   .brown-two {
-    font-size: 60px; /* Adjust font size for smaller screens */
-    letter-spacing: 30px; /* Adjust letter spacing */
+    font-size: 60px;
+    letter-spacing: 30px;
+  }
+  .james {
+    font-size: 80px;
+    letter-spacing: 50px;
+  }
+  .hardest-working {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .giphy-embed {
+    width: 380px;
+    height: 320px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .background-img {
+    position: absolute;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .overlay {
+    position: relative;
+    margin-top: 500px;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  .title {
+    position: relative;
+    top: -60px;
+  }
+  .icon {
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin-left: 80px;
+  }
+
+  h1 {
+    font-size: 60px;
+    letter-spacing: 4px;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  h2 {
+    margin-right: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  @keyframes outer-left {
+    from {
+      transform: translateX(90%);
+    }
+    to {
+      transform: none;
+    }
+  }
+  h3 {
+    margin-top: -40px;
+    margin-bottom: -280px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .spotify {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  p {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .brown {
+    margin-left: 15px;
+  }
+  .brown,
+  .brown-two {
+    font-size: 60px;
+    letter-spacing: 30px;
   }
   .james {
     font-size: 80px;
     letter-spacing: 30px;
   }
   .hardest-working {
-    font-size: 20px; /* Adjust font size for smaller screens */
-    letter-spacing: 2px; /* Adjust letter spacing */
+    font-size: 20px;
+    letter-spacing: 2px;
   }
 
   .container {
-    grid-template-columns: 1fr; /* Adjust grid layout for stacking elements */
+    grid-template-columns: 1fr;
     grid-gap: 20px;
+  }
+  .giphy-embed {
+    width: 250px;
+    height: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .background-img {
+    position: absolute;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .overlay {
+    position: relative;
+    margin-top: 412px;
+    top: 0;
+    left: 0;
+    transform: none;
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  .title {
+    position: relative;
+    top: -120px;
+  }
+  .icon {
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin-left: 80px;
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 4px;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  h2 {
+    margin-right: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  @keyframes outer-left {
+    from {
+      transform: translateX(90%);
+    }
+    to {
+      transform: none;
+    }
+  }
+  h3 {
+    margin-top: -40px;
+    margin-bottom: -280px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .spotify {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  p {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .brown {
+    margin-left: 15px;
+  }
+  .brown,
+  .brown-two {
+    font-size: 60px;
+    letter-spacing: 30px;
+  }
+  .james {
+    font-size: 80px;
+    letter-spacing: 30px;
+  }
+  .hardest-working {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .giphy-embed {
+    width: 250px;
+    height: 200px;
   }
 }
